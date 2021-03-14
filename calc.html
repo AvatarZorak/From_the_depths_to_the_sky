@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Калкулатори</title>
+	<link rel="icon" href="images/hrast.png">
+
+	<body style="background-color:#ddd1b1"></body>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js">
+	</script>
+</head>
+
+<body>
+	<h1>From the depths to the sky</h1>
+	<div class="navbar">
+		<a href="home.html">Начало</a>
+		<a href="curious.html">За любопитните</a>
+		<div class="dropdown">
+			<button class="dropbtn" onclick="myFunction()">Природа
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="soil.html">Почви</a>
+                <a href="water.html">Води</a>
+                <a href="plants.html">Растения</a>
+            </div>
+            </div>
+            <a href="urban.html">GoGreen-City</a>
+            <a href="calc.html">Калкулатори</a>
+        </div>
+        <h2>Калкулатори</h2>
+        <br>
+        <h3 id="headerCalc">Изчисляване на въгероден отпечатък</h3>
+        <ul id="border">
+            <li>
+                <pre>Изминато разстояние в км   <input type="number" id="distance" value="1000"></pre>
+            </li>
+            <li>
+                <pre>Разход на гориво в л/100км <input type="number" id="fuel" value="10"></pre>
+            </li>
+            <li>
+                <label>Вид гориво</label>
+                <select id="fuel_type">
+                    <option value=0>Бензин</option>
+                    <option value=1>Дизел</option>
+                    <option value=2>Метан</option>
+                    <option value=3>Газ</option>
+                </select>
+            </li>
+            <br>
+            <button onclick="CalculateCO2();" id="sub">Пресметни</button>
+            <h4 id="ResultCO2">Количесвото на CO2 емисии на вашата кола през този пробег е: ___ kg</h4>
+        </ul>
+        <img id="sn" src="images/car.png" alt="nqma snimka" width="600" height="250" style="vertical-align:middle;margin:-280px 900px">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 id="headerCalc">Изчисляване на времето, което ще отнеме на определен брой хора да изпият цялата питейна вода на света, ако всеки човек пие определено количество вода на ден</h3>
+        <ul id="border">
+            <li>
+                <pre>Средно количество вода изпита на ден    <input type="number" value=2 id="litters_per_day"></pre>
+            </li>
+            <li>
+                <pre>Население на света (световна популация) <input type="number" value=7200000000 id="population"></pre>
+            </li>
+            <button onclick="CalculateWater();" id="sub">Пресметни</button>
+            <h4 id="ResultWater">Питейната вода на света ще стигне за: ___ дни (___ години)</h4>
+        </ul>
+        <img id="sn" src="images/water_bottle.png" alt="nqma snimka" width="600" height="300" style="vertical-align:middle;margin:-270px 900px">
+        
+    </body>
+</html>
